@@ -1,0 +1,20 @@
+name: PrintCoords
+main: com.irrelevantknight.printcoords.PrintCoords
+version: 1.0
+description: >
+             Announces your coordinates in chat when /coords is typed
+commands:
+    coords:
+        description: Announces your coordinates in chat
+        usage: /coords
+        permission: printcoords.coords
+        permission-message: You do not have permission to do use this command.
+permissions:
+    printcoords.*:
+        description: Gives access to all printcoords permissions.
+        children:
+            printcoords.coords: true
+        default: op
+    printcoords.coords:
+        description: Allows the player to type /coords to announce their coordinates in chat
+        default: op
